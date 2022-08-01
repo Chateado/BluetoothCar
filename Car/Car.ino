@@ -44,6 +44,26 @@ void payload() {
   } else if (i == 'B') {
     
     back(); 
+    
+  } else if (i == 'R') {
+
+    right();
+    
+  } else if (i == 'L') {
+
+    left();
+    
+  } else if (i == 'I') {
+
+    fRight();
+    
+  } else if (i == 'G') {
+
+    fLeft();
+    
+  } else if (i == 'S') {
+
+    stop();
   }
 }
 
@@ -66,17 +86,41 @@ void back() {
 }
 
 void right() {
-  
+  left_engine.run(FORWARD);
+  left_engine.setSpeed(speed);
+
+  right_engine.run(BACKWARD);
+  right_engine.setSpeed(speed);
 }
 
 void left() {
-  
+  left_engine.run(BACKWARD);
+  left_engine.setSpeed(speed);
+
+  right_engine.run(FORWARD);
+  right_engine.setSpeed(speed);
 }
 
 void fRight() {
-  
+  left_engine.run(FORWARD);
+  left_engine.setSpeed(speed);
+
+  right_engine.run(FORWARD);
+  right_engine.setSpeed(speed / 2);
 }
 
 void fLeft() {
-  
+  left_engine.run(FORWARD);
+  left_engine.setSpeed(speed / 2);
+
+  right_engine.run(FORWARD);
+  right_engine.setSpeed(speed);
+}
+
+void stop() {
+  left_engine.run(RELEASE);
+  left_engine.setSpeed(0);
+
+  right_engine.run(RELEASE);
+  right_engine.setSpeed(0);
 }
