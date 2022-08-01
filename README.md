@@ -20,3 +20,11 @@ Back Right (Vira para atrás na diagonal para a direita): J
 Stop (Para o carro por completo): S
 
 Emergency Stop (Para e corta a energia dos controles por completo): D
+
+## Componentes utilizados
+
+Placa: Arduino Mega 2560 R3
+
+Placa Bluetooth: HC-06
+
+Shield: L293D
