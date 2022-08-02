@@ -25,7 +25,9 @@ void setup() {
 
 void loop() {
   connect();
+  
   payload();
+  power();
 }
 
 void connect() {
@@ -67,7 +69,19 @@ void payload() {
   }
 }
 
-// Definindo a movimentação do robô \\
+void power() {
+  if (i == '0') {
+    speed = 0;
+  } else if (i == '2') {
+    speed = 50;
+  } else if (i == '4') {
+    speed = 100;
+  } else if (i == '6') {
+    speed = 150;
+  } else if (i == '8') {
+    speed = 200;
+  }
+}
 
 void follow() {
   left_engine.run(FORWARD);
