@@ -69,6 +69,10 @@ void payload() {
   }
 }
 
+void accessories() {
+  
+}
+
 void power() {
   if (i == '0') {
     speed = 0;
@@ -80,6 +84,8 @@ void power() {
     speed = 150;
   } else if (i == '8') {
     speed = 200;
+  } else if (i == 'q') {
+    speed = 255;
   }
 }
 
